@@ -1,9 +1,9 @@
 // モジュール読み込み
-import line from '@line/bot-sdk';
-import { error, log } from '../log.js';
-import { bot } from '../bot.js';
-import { AppContext } from '../app-context.js';
-import { saveContentFileToDownloadDir } from '../save-file.js';
+import line from "@line/bot-sdk";
+import { error, log } from "../log.js";
+import { bot } from "../bot.js";
+import { AppContext } from "../app-context.js";
+import { saveContentFileToDownloadDir } from "../save-file.js";
 
 const { CHANNEL_ACCESS_TOKEN } = process.env;
 
@@ -29,10 +29,9 @@ export const webhook = (req, res) => {
   });
 
   // イベントを処理する関数を呼び出す
-  Promise.all(bot(events, appContext))
-    .catch((err) => {
-      error(`返信処理でエラーが発生しました: ${err}`);
-    });
+  Promise.all(bot(events, appContext)).catch((err) => {
+    error(`返信処理でエラーが発生しました: ${err}`);
+  });
 
-  return res.json('ok');
+  return res.json("ok");
 };

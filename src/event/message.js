@@ -1,12 +1,12 @@
 // ファイル読み込み
-import { hasKey } from '../haskey.js';
-import { audioEvent } from './message/audio.js';
-import { fileEvent } from './message/file.js';
-import { imageEvent } from './message/image.js';
-import { locationEvent } from './message/location.js';
-import { stickerEvent } from './message/sticker.js';
-import { textEvent } from './message/text.js';
-import { videoEvent } from './message/video.js';
+import { hasKey } from "../haskey.js";
+import { audioEvent } from "./message/audio.js";
+import { fileEvent } from "./message/file.js";
+import { imageEvent } from "./message/image.js";
+import { locationEvent } from "./message/location.js";
+import { stickerEvent } from "./message/sticker.js";
+import { textEvent } from "./message/text.js";
+import { videoEvent } from "./message/video.js";
 
 // メッセージタイプとHandler関数の対応オブジェクトを作成
 const eventHandlers = {
@@ -27,8 +27,8 @@ export const messageHandler = (event, appContext) => {
   // もし対応していないメッセージタイプのイベントが飛んできた場合
   if (!hasKey(eventHandlers, event.message.type)) {
     return {
-      type: 'text',
-      text: 'そのイベントには対応していません...',
+      type: "text",
+      text: "そのイベントには対応していません...",
     };
   }
 

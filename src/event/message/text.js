@@ -1,5 +1,5 @@
-import { hasKey } from '../../haskey.js';
-import { messageMap } from './text-map.js';
+import { hasKey } from "../../haskey.js";
+import { messageMap } from "./text-map.js";
 
 // テキストメッセージの処理をする関数
 export const textEvent = async (event, appContext) => {
@@ -13,7 +13,7 @@ export const textEvent = async (event, appContext) => {
 
   // 返信するメッセージが存在しない場合
   return {
-    type: 'text',
+    type: "text",
     text: `受け取ったメッセージ: ${receivedMessage}\nそのメッセージの返信には対応してません...`,
   };
 };

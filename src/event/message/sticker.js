@@ -4,12 +4,12 @@ export const stickerEvent = (event) => {
   // スタンプのIDごとに条件分岐
   switch (event.message.stickerId) {
     // スタンプのIDが1988だった場合
-    case '1988': {
+    case "1988": {
       // 返信するメッセージを作成
       message = {
-        type: 'sticker',
-        packageId: '446',
-        stickerId: '1989',
+        type: "sticker",
+        packageId: "446",
+        stickerId: "1989",
       };
       break;
     }
@@ -17,7 +17,7 @@ export const stickerEvent = (event) => {
     default: {
       // 返信するメッセージを作成
       message = {
-        type: 'text',
+        type: "text",
         text: `受け取ったstickerId: ${event.message.stickerId}\nそのスタンプの返信には対応してません...`,
       };
       break;
